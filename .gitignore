@@ -1,0 +1,41 @@
+# =========================================
+# Laravel / PHP
+# =========================================
+/vendor/
+/node_modules/
+/bootstrap/cache/*
+!bootstrap/cache/.gitignore
+/storage/*.key
+/storage/app/*
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/testing/*
+/storage/framework/views/*
+/storage/logs/*
+!/storage/app/public/.gitignore
+/.env
+/.env.*.local
+/.phpunit.cache/
+/phpunit.xml
+
+# =========================================
+# IDE / Editors
+# =========================================
+/.idea/
+/.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# =========================================
+# Tools / Build
+# =========================================
+/.php-cs-fixer.cache
+
+# =========================================
+# Docker (Phase 03 volumes + configs)
+# =========================================
+/db_data/           # MySQL volume
+/redis_data/        # Redis volume (if mounted)
+/mailpit_data/      # Mailpit persistent storage (optional)
+/docker-compose.override.yml
+/.docker/*.local    # any local-only docker configs
