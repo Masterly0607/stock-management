@@ -15,6 +15,7 @@
 !/storage/app/public/.gitignore
 /.env
 /.env.*.local
+!.env.example          # <--- Keep the example file
 /.phpunit.cache/
 /phpunit.xml
 
@@ -34,8 +35,8 @@
 # =========================================
 # Docker (Phase 03 volumes + configs)
 # =========================================
-/db_data/           # MySQL volume
-/redis_data/        # Redis volume (if mounted)
-/mailpit_data/      # Mailpit persistent storage (optional)
+/db_data/             # MySQL volume
+/redis_data/          # Redis volume (if mounted)
+/mailpit_data/        # Mailpit persistent storage (optional)
 /docker-compose.override.yml
-/.docker/*.local    # any local-only docker configs
+/.docker/*.local      # any local-only docker configs
