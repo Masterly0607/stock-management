@@ -1,4 +1,4 @@
-# ITC Stock Management System — Scope & Requirements
+# ITC Stock Management System — Phase 1: Scope & Requirements
 > Tech Stack: **Laravel 12 + Filament**  
 > Database: **MySQL**  
 > UI: **Single Filament Panel**  
