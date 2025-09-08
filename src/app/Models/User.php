@@ -4,7 +4,7 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 
-use Filament\Panel;
+
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -19,11 +19,8 @@ class User extends Authenticatable
      *
      * @var list<string>
      */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-    ];
+
+    protected $fillable = ['name', 'email', 'password', 'branch_id'];
 
     /**
      * The attributes that should be hidden for serialization.
@@ -47,10 +44,7 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
-    protected $guarded = [];
-     # canAccessPanel = the gatekeeper: only users with certain roles (super_admin, admin, distributor) can log in to Filament.
-    public function canAccessPanel(Panel $panel): bool
-    {
-        return $this->hasAnyRole(['super_admin','admin','distributor']);
-    }
+
+
+  public function branch(){ return $this->belongsTo(Branch::class); }
 }

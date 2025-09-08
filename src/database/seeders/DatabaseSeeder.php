@@ -9,10 +9,16 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call([
-            RolesAndUsersSeeder::class,
-            ProvinceDistrictSeeder::class,
-            BranchSeeder::class,
-            CategoryProductSeeder::class,
+            ProvincesSeeder::class,
+            DistrictsSeeder::class,
+            BranchesSeeder::class,
+            UsersSeeder::class,
+            CategoriesSeeder::class,
+            ProductsSeeder::class,
+            SuppliersSeeder::class,
+            DistributorsSeeder::class,
+            DemoFlowsSeeder::class   
+      
         ]);
     }
 }
